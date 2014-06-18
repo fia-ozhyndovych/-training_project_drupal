@@ -79,6 +79,7 @@ function my_theme_preprocess_page(&$vars, $hook) {
     ));
   }
 
+  $vars['subtitle'] = drupal_is_front_page() === TRUE ? t('my') : '';
 }
 
 /**

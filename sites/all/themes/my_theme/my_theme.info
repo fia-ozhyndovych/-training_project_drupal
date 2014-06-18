@@ -21,6 +21,7 @@ regions[search_box]     = Search Box
 regions[highlighted]    = Highlight
 regions[help]           = Help
 regions[content]        = Content
+regions[after_content]  = After content
 regions[sidebar_first]  = Left sidebar
 regions[sidebar_second] = Right sidebar
 regions[footer]         = Footer

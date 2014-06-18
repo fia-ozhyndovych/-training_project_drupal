@@ -46,8 +46,9 @@
   <div id="main" class="column <?php print ns('grid-16', $page['sidebar_first'], 4, $page['sidebar_second'], 3) . ' ' . ns('push-4', !$page['sidebar_first'], 4); ?>">
     <?php print $breadcrumb; ?>
     <?php print render($title_prefix); ?>
-    <?php if ($title): ?>
+    <?php if ($title || $subtitle): ?>
       <h1 class="title" id="page-title"><?php print $title; ?></h1>
+      <h1 class="subtitle" id="page-subtitle"><?php print $subtitle; ?></h1>
     <?php endif; ?>
     <?php print render($title_suffix); ?>      
     <?php if ($tabs): ?>
@@ -58,6 +59,11 @@
 
     <div id="main-content" class="region clearfix">
       <?php print render($page['content']); ?>
+        <?php if ($page['after_content']): ?>
+          <div id="after-content">
+              <?php print render($page['after_content']); ?>
+          </div>
+        <?php endif; ?>
     </div>
 
     <?php print $feed_icons; ?>
